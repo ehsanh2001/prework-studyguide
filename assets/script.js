@@ -1,5 +1,6 @@
 const topics = ["HTML", "CSS", "Git", "JavaScript"];
 const randomTopic = topics[Math.floor(Math.random() * topics.length)];
+const randStudy = document.getElementById("randStudy");
 
 function listTopics() {
   for (let x = 0; x < topics.length; x++) {
@@ -8,6 +9,7 @@ function listTopics() {
 }
 
 function selectTopic() {
+  randStudy.innerHTML = `<b>Let's Study ${randomTopic}</b>`;
   if (randomTopic === "HTML") {
     console.log("Let's study HTML!");
   } else if (randomTopic === "CSS") {
